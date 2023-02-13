@@ -10,36 +10,26 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: "iOS Developer",
+    Svg: require("@site/static/img/undraw_mobile_development.svg").default,
+    description: <>I started mobile development during my internship and still enjoy it now.</>,
+  },
+  {
+    title: "Hope it can be helpful to others",
+    Svg: require("@site/static/img/undraw_add_notes.svg").default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        I'll try to document the ways that have helped me to improve my quality of life, as a memo for myself, or even
+        help others.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
+    title: "Being curious about the world",
+    Svg: require("@site/static/img/undraw_scooter.svg").default,
+    description: <>Trying to get started in Brazilian Jiu-Jitsu, improve foreign language skills, etc.</>,
   },
-  {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
-  },
-];
+]
 
 function Feature({title, Svg, description}: FeatureItem) {
   return (
