@@ -3,20 +3,12 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Xinqi Explores',
+  tagline: 'Curiosity\'s cool',
   favicon: 'img/favicon.ico',
-
-  // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  
+  url: 'https://www.muxinqi.com',
   baseUrl: '/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -37,17 +29,13 @@ const config: Config = {
           path: 'notes',
           routeBasePath: 'notes',
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
+          editUrl: 'https://github.com/muxinqi/muxinqi.com/tree/main/',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/muxinqi/muxinqi.com/tree/main/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -60,7 +48,7 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: '@muxinqi',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
@@ -70,11 +58,11 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: '📝 笔记',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/blog', label: '🌄 博客', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/muxinqi/muxinqi.com',
           label: 'GitHub',
           position: 'right',
         },
@@ -84,28 +72,24 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Categories',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: '📝 笔记',
+              to: '/notes/intro',
             },
+            {
+              label: '🌄 博客',
+              to: '/blog',
+            }
           ],
         },
         {
-          title: 'Community',
+          title: 'Projects',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              label: 'muxinqi.com',
+              href: 'https://github.com/muxinqi/muxinqi.com',
             },
           ],
         },
@@ -113,17 +97,21 @@ const config: Config = {
           title: 'More',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'GitHub',
+              href: 'https://github.com/muxinqi',
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: 'Twitter',
+              href: 'https://twitter.com/muxinqi',
             },
+            {
+              label: 'Email',
+              href: 'mailto:hi@muxinqi.com'
+            }
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} <a href="https://github.com/muxinqi">Xinqi Mu</a>`,
     },
     prism: {
       theme: prismThemes.github,
