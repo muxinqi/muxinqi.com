@@ -2,6 +2,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const config: Config = {
   title: 'Xinqi Explores',
   tagline: 'Curiosity\'s cool',
@@ -122,12 +124,12 @@ const config: Config = {
     },
   } satisfies Preset.ThemeConfig,
 
-  scripts: [
+  scripts: isProd ? [
     {
       src: 'https://js.sentry-cdn.com/8f8f9de80b1d17e2ad8dbe64deea6519.min.js',
       crossorigin: 'anonymous',
     },
-  ],
+  ] : [],
 };
 
 export default config;
