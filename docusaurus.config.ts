@@ -124,12 +124,28 @@ const config: Config = {
     },
   } satisfies Preset.ThemeConfig,
 
-  scripts: isProd ? [
+  headTags: !isProd ? [] : [
+    // Sentry
     {
-      src: 'https://js.sentry-cdn.com/8f8f9de80b1d17e2ad8dbe64deea6519.min.js',
-      crossorigin: 'anonymous',
+      tagName: 'script',
+      attributes: {
+        src: 'https://js.sentry-cdn.com/8f8f9de80b1d17e2ad8dbe64deea6519.min.js',
+        crossorigin: 'anonymous',
+      },
     },
-  ] : [],
+    // Microsoft Clarity
+    {
+      tagName: 'script',
+      attributes: { type: 'text/javascript' },
+      innerHTML: `
+        (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "k135p7ppf5");
+      `,
+    }
+  ],
 };
 
 export default config;
