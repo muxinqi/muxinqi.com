@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import Link from "@docusaurus/Link";
 
 type FeatureItem = {
   title: string;
@@ -10,32 +11,34 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Who am I?',
+    Svg: require('@site/static/img/undraw_into_the_night.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        I'm <strong>Xinqi Mu</strong>, based in Chaoyang, Beijing.
+        Currently, I work as an iOS software developer.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'What\'s in here?',
+    Svg: require('@site/static/img/undraw_content.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        <strong><Link to="/notes/intro">Notes</Link>:</strong> Personal memo, useful & reusable
+        <br/>
+        <strong><Link to="/blog">Blog</Link>:</strong> Documenting life and interesting
+        <div style={{ color: 'gray' }}>To be continued...</div>
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Always exploring!',
+    Svg: require('@site/static/img/undraw_explore.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        The world is vast, with countless interesting things waiting to be discovered.
+        I'm already on the road!
       </>
     ),
   },

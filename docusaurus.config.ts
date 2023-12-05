@@ -51,7 +51,7 @@ const config: Config = {
       title: '@muxinqi',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: 'img/logo.webp',
       },
       items: [
         {
