@@ -28,7 +28,6 @@ const FeatureList: FeatureItem[] = [
         <strong><Link to="/notes/intro">Notes</Link>:</strong> Personal memo, useful & reusable
         <br/>
         <strong><Link to="/blog">Blog</Link>:</strong> Documenting life and interesting
-        <div style={{ color: 'gray' }}>To be continued...</div>
       </>
     ),
   },
