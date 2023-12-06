@@ -148,6 +148,7 @@ const config: Config = {
     // Vercel Analytics
     {
       tagName: 'script',
+      attributes: { type: 'text/javascript' },
       innerHTML: `
         window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
       `,
