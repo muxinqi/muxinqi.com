@@ -125,14 +125,6 @@ const config: Config = {
   } satisfies Preset.ThemeConfig,
 
   headTags: !isProd ? [] : [
-    // Sentry
-    {
-      tagName: 'script',
-      attributes: {
-        src: 'https://js.sentry-cdn.com/8f8f9de80b1d17e2ad8dbe64deea6519.min.js',
-        crossorigin: 'anonymous',
-      },
-    },
     // Microsoft Clarity
     {
       tagName: 'script',
@@ -153,14 +145,20 @@ const config: Config = {
         window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
       `,
     },
-    {
-      tagName: 'script',
-      attributes: {
-        src: '/_vercel/insights/script.js',
-        defer: true,
-      }
-    }
   ],
+
+  scripts: !isProd ? [] : [
+    // Sentry
+    {
+      src: 'https://js.sentry-cdn.com/8f8f9de80b1d17e2ad8dbe64deea6519.min.js',
+      crossorigin: 'anonymous',
+    },
+    // Vercel Analytics
+    {
+      src: '/_vercel/insights/script.js',
+      defer: true,
+    },
+  ]
 };
 
 export default config;
