@@ -144,6 +144,20 @@ const config: Config = {
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "k135p7ppf5");
       `,
+    },
+    // Vercel Analytics
+    {
+      tagName: 'script',
+      innerHTML: `
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+      `,
+    },
+    {
+      tagName: 'script',
+      attributes: {
+        src: '/_vercel/insights/script.js',
+        defer: true,
+      }
     }
   ],
 };
