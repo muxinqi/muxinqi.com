@@ -96,7 +96,7 @@
     ],
     "rules": {}
   },
-  "prettier":{
+  "prettier": {
     "semi": false,
     "singleQuote": true
   }
