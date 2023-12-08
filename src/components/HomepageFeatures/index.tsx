@@ -1,49 +1,58 @@
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
-import styles from './styles.module.css';
-import Link from "@docusaurus/Link";
+import clsx from 'clsx'
+import Heading from '@theme/Heading'
+import styles from './styles.module.css'
+import Link from '@docusaurus/Link'
+import undraw_into_the_night from '@site/static/img/undraw_into_the_night.svg'
+import undraw_content from '@site/static/img/undraw_content.svg'
+import undraw_explore from '@site/static/img/undraw_explore.svg'
 
 type FeatureItem = {
-  title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
-  description: JSX.Element;
-};
+  title: string
+  Svg: React.ComponentType<React.ComponentProps<'svg'>>
+  description: JSX.Element
+}
 
 const FeatureList: FeatureItem[] = [
   {
     title: 'Who am I?',
-    Svg: require('@site/static/img/undraw_into_the_night.svg').default,
+    Svg: undraw_into_the_night,
     description: (
       <>
-        I'm <strong>Xinqi Mu</strong>, based in Chaoyang, Beijing.
+        I{"'"}m <strong>Xinqi Mu</strong>, based in Chaoyang, Beijing.
         Currently, I work as an iOS software developer.
       </>
     ),
   },
   {
-    title: 'What\'s in here?',
-    Svg: require('@site/static/img/undraw_content.svg').default,
+    title: "What's in here?",
+    Svg: undraw_content,
     description: (
       <>
-        <strong><Link to="/notes/intro">Notes</Link>:</strong> Personal memo, useful & reusable
-        <br/>
-        <strong><Link to="/blog">Blog</Link>:</strong> Documenting life and interesting
+        <strong>
+          <Link to="/notes/intro">Notes</Link>:
+        </strong>{' '}
+        Personal memo, useful & reusable
+        <br />
+        <strong>
+          <Link to="/blog">Blog</Link>:
+        </strong>{' '}
+        Documenting life and interesting
       </>
     ),
   },
   {
     title: 'Always exploring!',
-    Svg: require('@site/static/img/undraw_explore.svg').default,
+    Svg: undraw_explore,
     description: (
       <>
-        The world is vast, with countless interesting things waiting to be discovered.
-        I'm already on the road!
+        The world is vast, with countless interesting things waiting to be
+        discovered. I{"'"}m already on the road!
       </>
     ),
   },
-];
+]
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({ title, Svg, description }: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
@@ -54,7 +63,7 @@ function Feature({title, Svg, description}: FeatureItem) {
         <p>{description}</p>
       </div>
     </div>
-  );
+  )
 }
 
 export default function HomepageFeatures(): JSX.Element {
@@ -68,5 +77,5 @@ export default function HomepageFeatures(): JSX.Element {
         </div>
       </div>
     </section>
-  );
+  )
 }

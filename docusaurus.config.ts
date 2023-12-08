@@ -1,14 +1,14 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
-import type * as Preset from '@docusaurus/preset-classic';
+import { themes as prismThemes } from 'prism-react-renderer'
+import type { Config } from '@docusaurus/types'
+import type * as Preset from '@docusaurus/preset-classic'
 
-const isProd = process.env.NODE_ENV === 'production';
+const isProd = process.env.NODE_ENV === 'production'
 
 const config: Config = {
   title: 'Xinqi Explores',
-  tagline: 'Curiosity\'s cool',
+  tagline: "Curiosity's cool",
   favicon: 'img/favicon.ico',
-  
+
   url: 'https://www.muxinqi.com',
   baseUrl: '/',
 
@@ -44,7 +44,7 @@ const config: Config = {
         },
         gtag: {
           trackingID: 'G-P87JCEP6Z6',
-        }
+        },
       } satisfies Preset.Options,
     ],
   ],
@@ -68,7 +68,7 @@ const config: Config = {
           position: 'left',
           label: '📝 笔记',
         },
-        {to: '/blog', label: '🌄 博客', position: 'left'},
+        { to: '/blog', label: '🌄 博客', position: 'left' },
         {
           href: 'https://github.com/muxinqi/muxinqi.com',
           label: 'GitHub',
@@ -89,7 +89,7 @@ const config: Config = {
             {
               label: '🌄 博客',
               to: '/blog',
-            }
+            },
           ],
         },
         {
@@ -114,8 +114,8 @@ const config: Config = {
             },
             {
               label: 'Email',
-              href: 'mailto:hi@muxinqi.com'
-            }
+              href: 'mailto:hi@muxinqi.com',
+            },
           ],
         },
       ],
@@ -127,41 +127,45 @@ const config: Config = {
     },
   } satisfies Preset.ThemeConfig,
 
-  headTags: !isProd ? [] : [
-    // Microsoft Clarity
-    {
-      tagName: 'script',
-      attributes: { type: 'text/javascript' },
-      innerHTML: `
+  headTags: !isProd
+    ? []
+    : [
+        // Microsoft Clarity
+        {
+          tagName: 'script',
+          attributes: { type: 'text/javascript' },
+          innerHTML: `
         (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "k135p7ppf5");
       `,
-    },
-    // Vercel Analytics
-    {
-      tagName: 'script',
-      attributes: { type: 'text/javascript' },
-      innerHTML: `
+        },
+        // Vercel Analytics
+        {
+          tagName: 'script',
+          attributes: { type: 'text/javascript' },
+          innerHTML: `
         window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
       `,
-    },
-  ],
+        },
+      ],
 
-  scripts: !isProd ? [] : [
-    // Sentry
-    {
-      src: 'https://js.sentry-cdn.com/8f8f9de80b1d17e2ad8dbe64deea6519.min.js',
-      crossorigin: 'anonymous',
-    },
-    // Vercel Analytics
-    {
-      src: '/_vercel/insights/script.js',
-      defer: true,
-    },
-  ]
-};
+  scripts: !isProd
+    ? []
+    : [
+        // Sentry
+        {
+          src: 'https://js.sentry-cdn.com/8f8f9de80b1d17e2ad8dbe64deea6519.min.js',
+          crossorigin: 'anonymous',
+        },
+        // Vercel Analytics
+        {
+          src: '/_vercel/insights/script.js',
+          defer: true,
+        },
+      ],
+}
 
-export default config;
+export default config
