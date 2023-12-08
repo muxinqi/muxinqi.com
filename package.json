@@ -31,7 +31,10 @@
     "@typescript-eslint/eslint-plugin": "^6.13.2",
     "@typescript-eslint/parser": "^6.13.2",
     "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-react": "^7.33.2",
+    "prettier": "3.1.0",
     "typescript": "~5.2.2"
   },
   "browserslist": {
@@ -52,7 +55,9 @@
   "eslintConfig": {
     "overrides": [
       {
-        "files": ["babel.config.js"],
+        "files": [
+          "babel.config.js"
+        ],
         "env": {
           "node": true
         }
@@ -71,7 +76,8 @@
       "eslint:recommended",
       "plugin:@typescript-eslint/recommended",
       "plugin:react/recommended",
-      "plugin:react/jsx-runtime"
+      "plugin:react/jsx-runtime",
+      "plugin:prettier/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
