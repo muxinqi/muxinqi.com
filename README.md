@@ -8,12 +8,6 @@ This website is built using [Docusaurus](https://docusaurus.io/), a modern stati
 $ pnpm install
 ```
 
-### Setup Git Hooks
-
-```sh
-$ pnpm prepare
-```
-
 ### Local Development
 
 ```sh
