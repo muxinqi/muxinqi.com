@@ -1,15 +1,15 @@
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
-import styles from './styles.module.css';
+import clsx from 'clsx'
+import Heading from '@theme/Heading'
+import styles from './styles.module.css'
 import undraw_docusaurus_mountain from '@site/static/img/undraw_docusaurus_mountain.svg'
 import undraw_docusaurus_tree from '@site/static/img/undraw_docusaurus_tree.svg'
 import undraw_docusaurus_react from '@site/static/img/undraw_docusaurus_react.svg'
 
 type FeatureItem = {
-  title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
-  description: JSX.Element;
-};
+  title: string
+  Svg: React.ComponentType<React.ComponentProps<'svg'>>
+  description: JSX.Element
+}
 
 const FeatureList: FeatureItem[] = [
   {
@@ -42,9 +42,9 @@ const FeatureList: FeatureItem[] = [
       </>
     ),
   },
-];
+]
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({ title, Svg, description }: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
@@ -55,7 +55,7 @@ function Feature({title, Svg, description}: FeatureItem) {
         <p>{description}</p>
       </div>
     </div>
-  );
+  )
 }
 
 export default function HomepageFeatures(): JSX.Element {
@@ -69,5 +69,5 @@ export default function HomepageFeatures(): JSX.Element {
         </div>
       </div>
     </section>
-  );
+  )
 }

@@ -89,5 +89,9 @@
       "react"
     ],
     "rules": {}
+  },
+  "prettier":{
+    "semi": false,
+    "singleQuote": true
   }
 }
