@@ -1,17 +1,20 @@
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
-import styles from './styles.module.css';
+import clsx from 'clsx'
+import Heading from '@theme/Heading'
+import styles from './styles.module.css'
+import undraw_docusaurus_mountain from '@site/static/img/undraw_docusaurus_mountain.svg'
+import undraw_docusaurus_tree from '@site/static/img/undraw_docusaurus_tree.svg'
+import undraw_docusaurus_react from '@site/static/img/undraw_docusaurus_react.svg'
 
 type FeatureItem = {
-  title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
-  description: JSX.Element;
-};
+  title: string
+  Svg: React.ComponentType<React.ComponentProps<'svg'>>
+  description: JSX.Element
+}
 
 const FeatureList: FeatureItem[] = [
   {
     title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: undraw_docusaurus_mountain,
     description: (
       <>
         Docusaurus was designed from the ground up to be easily installed and
@@ -21,7 +24,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: undraw_docusaurus_tree,
     description: (
       <>
         Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
@@ -31,7 +34,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: undraw_docusaurus_react,
     description: (
       <>
         Extend or customize your website layout by reusing React. Docusaurus can
@@ -39,9 +42,9 @@ const FeatureList: FeatureItem[] = [
       </>
     ),
   },
-];
+]
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({ title, Svg, description }: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
@@ -52,7 +55,7 @@ function Feature({title, Svg, description}: FeatureItem) {
         <p>{description}</p>
       </div>
     </div>
-  );
+  )
 }
 
 export default function HomepageFeatures(): JSX.Element {
@@ -66,5 +69,5 @@ export default function HomepageFeatures(): JSX.Element {
         </div>
       </div>
     </section>
-  );
+  )
 }
