@@ -49,6 +49,14 @@
     "node": ">=18.0"
   },
   "eslintConfig": {
+    "overrides": [
+      {
+        "files": ["babel.config.js"],
+        "env": {
+          "node": true
+        }
+      }
+    ],
     "settings": {
       "react": {
         "version": "detect"
