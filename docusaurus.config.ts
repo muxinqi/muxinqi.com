@@ -2,6 +2,14 @@ import { themes as prismThemes } from 'prism-react-renderer'
 import type { Config } from '@docusaurus/types'
 import type * as Preset from '@docusaurus/preset-classic'
 
+// spell-checker: disable
+const Constants = {
+  GTAG_TRACKING_ID: 'G-P87JCEP6Z6',
+  ALGOLIA_APP_ID: 'DVPTVLGBIM',
+  ALGOLIA_API_KEY: '5d0be014fd499471d9226ba4cc74d7c1',
+} as const
+// spell-checker: enable
+
 const isProd = process.env.NODE_ENV === 'production'
 
 const config: Config = {
@@ -43,7 +51,7 @@ const config: Config = {
           customCss: './src/css/custom.css',
         },
         gtag: {
-          trackingID: 'G-P87JCEP6Z6',
+          trackingID: Constants.GTAG_TRACKING_ID,
         },
       } satisfies Preset.Options,
     ],
@@ -75,6 +83,12 @@ const config: Config = {
           position: 'right',
         },
       ],
+    },
+    algolia: {
+      appId: Constants.ALGOLIA_APP_ID,
+      apiKey: Constants.ALGOLIA_API_KEY,
+      indexName: 'muxinqi',
+      contextualSearch: true,
     },
     footer: {
       style: 'dark',
@@ -135,20 +149,20 @@ const config: Config = {
           tagName: 'script',
           attributes: { type: 'text/javascript' },
           innerHTML: `
-        (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "k135p7ppf5");
-      `,
+            (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "k135p7ppf5");
+          `,
         },
         // Vercel Analytics
         {
           tagName: 'script',
           attributes: { type: 'text/javascript' },
           innerHTML: `
-        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-      `,
+            window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+          `,
         },
       ],
 
