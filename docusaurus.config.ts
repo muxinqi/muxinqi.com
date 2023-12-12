@@ -76,6 +76,12 @@ const config: Config = {
         },
       ],
     },
+    algolia: {
+      appId: 'DVPTVLGBIM',
+      apiKey: '5d0be014fd499471d9226ba4cc74d7c1',
+      indexName: 'muxinqi',
+      contextualSearch: true,
+    },
     footer: {
       style: 'dark',
       links: [
