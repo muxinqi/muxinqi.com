@@ -2,13 +2,11 @@ import { themes as prismThemes } from 'prism-react-renderer'
 import type { Config } from '@docusaurus/types'
 import type * as Preset from '@docusaurus/preset-classic'
 
-// spell-checker: disable
 const Constants = {
   GTAG_TRACKING_ID: 'G-P87JCEP6Z6',
   ALGOLIA_APP_ID: 'DVPTVLGBIM',
   ALGOLIA_API_KEY: '5d0be014fd499471d9226ba4cc74d7c1',
 } as const
-// spell-checker: enable
 
 const isProd = process.env.NODE_ENV === 'production'
 
