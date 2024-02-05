@@ -134,8 +134,9 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} <a href="https://github.com/muxinqi">Xinqi Mu</a>`,
     },
     prism: {
-      theme: prismThemes.github,
+      theme: prismThemes.palenight,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: ['bash', 'diff'],
     },
   } satisfies Preset.ThemeConfig,
 
