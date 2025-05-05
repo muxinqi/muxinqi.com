@@ -3,18 +3,19 @@ interface Props {
   trackingId: string;
 }
 const { trackingId } = Astro.props;
+const gtagUrl = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
 ---
 
 {
   import.meta.env.PROD && (
     <>
-      <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${trackingId}`}></script>
+      <script is:inline async src={gtagUrl}></script>
       <script is:inline>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', '{trackingId}');
+        gtag('config', trackingId);
       </script>
     </>
   )
