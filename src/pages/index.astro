@@ -1,0 +1,42 @@
+---
+import LinkButton from "@components/LinkButton.astro";
+import Layout from "@layouts/Layout.astro";
+import { GithubIcon, LinkedinIcon } from "@lucide/astro";
+
+const name = "Xinqi Mu";
+const description = "";
+---
+
+<Layout>
+  <main class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-6 rounded-2xl shadow-lg w-full max-w-sm text-center">
+      <img
+        src="https://github.com/muxinqi.png"
+        alt="Xinqi Mu's Avatar"
+        class="w-24 h-24 rounded-full mx-auto mb-4"
+      />
+      <h1 class="text-2xl font-bold mb-2">{name}</h1>
+      <p class="text-gray-600 mb-6">{description}</p>
+
+      <div class="flex flex-col gap-4">
+        <LinkButton
+          href="https://github.com/muxinqi"
+          icon={GithubIcon}
+          color="github"
+          text="GitHub"
+        />
+
+        <LinkButton
+          href="https://linkedin.com/in/muxinqi"
+          icon={LinkedinIcon}
+          color="linkedin"
+          text="LinkedIn"
+        />
+
+        <!-- <LinkButton href="https://blog.muxinqi.com" icon={GlobeIcon} color="blog" text="My Blog" /> -->
+      </div>
+
+      <footer class="mt-6 text-xs text-gray-400">© 2025 Xinqi Mu. All rights reserved.</footer>
+    </div>
+  </main>
+</Layout>
