@@ -10,7 +10,7 @@ const gtagUrl = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
   import.meta.env.PROD && (
     <>
       <script is:inline async src={gtagUrl}></script>
-      <script is:inline>
+      <script is:inline define:vars={{ trackingId }}>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
