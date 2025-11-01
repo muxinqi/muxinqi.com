@@ -4,3 +4,19 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
+    groups:
+      astro-framework:
+        patterns:
+          - "astro"
+          - "@astrojs/*"
+      tailwind:
+        patterns:
+          - "tailwindcss"
+          - "@tailwindcss/*"
+      cloudflare:
+        patterns:
+          - "@cloudflare/*"
+          - "wrangler"
+      ui-components:
+        patterns:
+          - "@lucide/*"
